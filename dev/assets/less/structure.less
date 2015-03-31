@@ -19,7 +19,7 @@ body {
 .container {
     min-height: 100%;
     display: flex;
-    flex-flow: column;
+    flex-flow: column wrap;
     position: relative;
     background: url(../img/bg-header.jpg) fixed no-repeat;
     background-size: cover;
@@ -59,9 +59,6 @@ body {
 
 .main-header {
     padding: 40/@em 25/@em;
-    display: flex;
-    flex-flow: column;
-    align-items: center;
     overflow: auto;
     position: relative;
     background: url(../img/bg-overlay.png);
@@ -79,11 +76,22 @@ body {
     @media @600-min {
         padding: 50/@em 180/@em;
     }
+
+    @media @960-min {
+        @base-font-size: 16;
+
+        width: 30%;
+        padding: 95/@em 50/@em 20/@em;
+        flex: 1;
+        .em-font-size(@base-font-size, 20);
+        text-align: right;
+    }
 }
 
 .person-image {
     width: 130/@em;
     margin: 0 0 15/@em;
+    display: inline-block;
     font-size: 1em;
 
     a {
@@ -127,6 +135,15 @@ body {
     flex: 1;
     position: relative;
     background-color: #fff;
+
+    @media @960-min {
+        overflow: auto;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 30%;
+    }
 }
 
 
@@ -137,6 +154,17 @@ body {
 .main-footer {
     padding: 35/@em 25/@em;
     position: relative;
+    background: url(../img/bg-overlay.png);
+
+    @media @960-min {
+        @base-font-size: 16;
+
+        width: 30%;
+        /*position: fixed;
+        bottom: 0;
+        left: 0;*/
+        .em-font-size(@base-font-size, 20);
+    }
 }
 
 .social-networks {
