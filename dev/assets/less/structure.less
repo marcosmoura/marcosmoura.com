@@ -2,8 +2,7 @@
    ========================================================================== */
 
 html,
-body,
-.container {
+body {
     height: 100%;
 }
 
@@ -18,10 +17,11 @@ body {
 }
 
 .container {
+    min-height: 100%;
     display: flex;
+    flex-flow: column;
     position: relative;
-    background: url(../img/bg-header.jpg) no-repeat;
-    background-size: cover;
+    background: url(../img/bg-header.jpg) fixed no-repeat;
 
     /* 320px */
     @media only screen and (max-width: 20em) {
@@ -73,19 +73,20 @@ body {
    ========================================================================== */
 
 .main-header {
-    width: 30%;
-    padding: 10% 40/@em 5%;
+    padding: 70/@em 25/@em;
     display: flex;
     flex-flow: column;
+    align-items: center;
     overflow: auto;
     position: relative;
     background: url(../img/bg-overlay.png);
     color: rgba(255, 255, 255, .5);
-    text-align: right;
+    text-align: center;
 }
 
 .person-image {
-    margin: 0 0 25/@em;
+    width: 130/@em;
+    margin: 0 0 15/@em;
     font-size: 1em;
 
     a {
@@ -109,7 +110,7 @@ body {
 .person-description {
     @base-font-size: 20;
 
-    flex: 1;
+    margin: 0;
     .em-font-size(@base-font-size, 16);
     line-height: 1.7em;
 
@@ -119,13 +120,38 @@ body {
     }
 }
 
+
+
+/*  Main Content
+   ========================================================================== */
+
+.main-content {
+    padding: 25/@em;
+    flex: 1;
+    position: relative;
+    background-color: #fff;
+}
+
+
+
+/*  Footer
+   ========================================================================== */
+
+.main-footer {
+    padding: 35/@em 25/@em;
+    position: relative;
+}
+
 .social-networks {
-    margin-right: -3%;
+    padding: 0 20/@em;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
 
     a {
-        padding: 3%;
-        margin-left: 5%;
-        display: inline-block;
+        padding: 10px;
+        overflow: hidden;
+        position: relative;
         opacity: .4;
         transition: .2s opacity @material-timing;
         color: #fff;
@@ -152,25 +178,5 @@ body {
     @base-font-size: 13;
 
     .em-font-size(@base-font-size, 16);
-}
-
-
-
-/*  Main Content
-   ========================================================================== */
-
-.main-content {
-    padding: 10% 50/@em 5%;
-    flex: 1;
-    position: relative;
-    background-color: #fff;
-}
-
-
-
-/*  Footer
-   ========================================================================== */
-
-.main-footer {
-    position: relative;
+    text-align: center;
 }
