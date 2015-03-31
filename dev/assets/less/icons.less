@@ -1,15 +1,40 @@
-[class^="icon-"],
-[class*=" icon-"] {
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
     width: auto;
     height: auto;
-    padding: 0;
-    margin-top: 0;
     display: inline-block;
-    .ir;
-    border: none;
-    background-color: transparent;
-    background-repeat: no-repeat;
-    background-size: 100% auto;
-    line-height: normal;
+    font-family: @font-fontello;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    line-height: 1em;
+    text-align: center;
+    text-decoration: inherit;
+    text-transform: none;
     vertical-align: baseline;
 }
+
+.icon-github:before {
+    content: '\e800';
+}
+
+.icon-facebook:before {
+    content: '\e801';
+}
+
+.icon-mail:before {
+    content: '\e802';
+}
+
+.icon-linkedin:before {
+    content: '\e803';
+}
+
+.icon-home:before {
+    content: '\e804';
+}
+
+.icon-mobile:before {
+    content: '\e805';
+}
+
