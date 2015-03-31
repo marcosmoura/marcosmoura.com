@@ -1,0 +1,14 @@
+{
+  "projectName": "marcosmoura.com",
+  "version": "0.0.0",
+  "name": "marcosmouracom",
+  "dependencies": {
+    "jquery": "~2.1.3",
+    "fastclick": "~1.0.6",
+    "modernizr": "~2.8.3",
+    "normalize-css": "~3.0.2",
+    "angular": "~1.3.14",
+    "angular-animate": "latest",
+    "ui-router": "latest"
+  }
+}

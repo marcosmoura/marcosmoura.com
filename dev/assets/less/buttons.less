@@ -1,0 +1,38 @@
+.button {
+    margin: 0;
+    display: inline-block;
+    position: relative;
+    overflow: visible;
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-drag: none;
+    border: none;
+    font: inherit;
+    line-height: normal;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    white-space: nowrap;
+
+    &:hover,
+    &:focus {
+
+        outline: none;
+    }
+
+    &:active {
+
+    }
+
+    &[disabled],
+    &.disabled {
+        cursor: not-allowed;
+        pointer-events: none;
+        opacity: .5;
+    }
+
+    &::-moz-focus-inner {
+        padding: 0;
+        border: 0;
+    }
+}

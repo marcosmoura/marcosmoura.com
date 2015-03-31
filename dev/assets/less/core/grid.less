@@ -1,0 +1,90 @@
+/*  Grid base
+   ========================================================================== */
+
+/* Grid Sizes */
+@columns: 12;
+@column-width: 69;
+@gutter-width: 12;
+@total-width: 100%;
+@gridsystem-width: (@column-width*@columns) + (@gutter-width*@columns) - @gutter-width;
+
+
+/* Grid Formula */
+.width(@x, @columns: @columns) {
+    width: @total-width*((((@gutter-width+@column-width)*@x)-@gutter-width) / @gridsystem-width);
+}
+
+.margin-left(@x: 1, @columns: @columns) {
+    margin-left: @total-width*((((@gutter-width+@column-width)*@x)-@gutter-width*2) / @gridsystem-width);
+}
+
+.padding-left(@x: 1, @columns: @columns) {
+    padding-left: @total-width*((((@gutter-width+@column-width)*@x)-@gutter-width*2) / @gridsystem-width);
+}
+
+.margin-right(@x: 1, @columns: @columns) {
+    margin-right: @total-width*((((@gutter-width+@column-width)*@x)-@gutter-width) / @gridsystem-width);
+}
+
+.padding-right(@x: 1, @columns: @columns) {
+    padding-right: @total-width*((((@gutter-width+@column-width)*@x)-@gutter-width) / @gridsystem-width);
+}
+
+
+
+/*  Columns
+   ========================================================================== */
+
+@column-class: .column;
+
+.row {
+    .cf;
+}
+
+@{column-class} {
+    float: left;
+
+    + & {
+        margin-left: @total-width*(@gutter-width/@gridsystem-width);
+    }
+}
+
+@{column-class}-one    { .width(01) }
+@{column-class}-two    { .width(02) }
+@{column-class}-three  { .width(03) }
+@{column-class}-four   { .width(04) }
+@{column-class}-five   { .width(05) }
+@{column-class}-six    { .width(06) }
+@{column-class}-seven  { .width(07) }
+@{column-class}-eight  { .width(08) }
+@{column-class}-nine   { .width(09) }
+@{column-class}-ten    { .width(10) }
+@{column-class}-eleven { .width(11) }
+@{column-class}-twelve { .width(12) }
+
+@{column-class}-centered {
+    margin: 0 auto !important;
+    float: none;
+}
+
+
+
+/*  Table Columns
+   ========================================================================== */
+
+.data-table {
+    width: 100%;
+
+    .one    { .width(01) }
+    .two    { .width(02) }
+    .three  { .width(03) }
+    .four   { .width(04) }
+    .five   { .width(05) }
+    .six    { .width(06) }
+    .seven  { .width(07) }
+    .eight  { .width(08) }
+    .nine   { .width(09) }
+    .ten    { .width(10) }
+    .eleven { .width(11) }
+    .twelve { .width(12) }
+}

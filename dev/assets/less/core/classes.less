@@ -1,0 +1,124 @@
+/*  Common
+   ========================================================================== */
+
+.cf {
+    &:after {
+        display: table;
+        clear: both;
+        content: " ";
+    }
+}
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+
+    &:before {
+        width: 0;
+        height: 150%;
+        display: block;
+        content: " ";
+    }
+}
+
+.ir-old {
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+}
+
+.d-table {
+    width: 100%;
+    display: table;
+}
+
+.d-cell {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.scrolling {
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+
+
+/*  Alignment
+   ========================================================================== */
+
+.left {
+    float: left !important;
+}
+
+.right {
+    float: right !important;
+}
+
+.clear {
+    clear: both !important;
+}
+
+.hidden,
+[hidden] {
+    display: none !important;
+}
+
+.inline-block {
+    display: inline-block !important;
+}
+
+.align-left {
+    text-align: left !important;
+}
+
+.align-center {
+    text-align: center !important;
+}
+
+.align-right {
+    text-align: right !important;
+}
+
+.vertical-align {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+
+/*  Visibility
+   ========================================================================== */
+
+.visible {
+    display: block !important;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.vh {
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    position: absolute;
+    clip: rect(0 0 0 0);
+    border: 0;
+
+    &.focusable {
+        &:active,
+        &:focus {
+            width: auto;
+            height: auto;
+            margin: 0;
+            overflow: visible;
+            position: static;
+            clip: auto;
+        }
+    }
+}
