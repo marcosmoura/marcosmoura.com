@@ -151,6 +151,30 @@ body {
     }
 }
 
+.page-menu {
+    @base-font-size: 20;
+
+    padding: 13/@em 16/@em;
+    margin: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: none;
+    border: none;
+    transition: .3s color @material-timing;
+    .em-font-size(@base-font-size, 16);
+
+    &:hover {
+        color: #fff;
+    }
+
+    span {
+        position: absolute;
+        top: 100%;
+    }
+}
+
 
 
 /*  Main Content

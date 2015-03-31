@@ -55,12 +55,19 @@
     <body ng-controller="MainController as Main">
         <div class="container" ng-class="{'loaded': Main.structureLoaded}">
             <header class="main-header">
-                <h1 class="person-image">
-                    <a href="#" title="Marcos Moura">
-                        <img src="assets/img/marcos-moura.jpg" alt="Marcos Moura">
-                    </a>
-                </h1>
-                <p class="person-description"><strong>Front End</strong> System Analyst from <strong>Brazil</strong> with a focus on usability and performance.</p>
+                <div class="person-panel">
+                    <h1 class="person-image">
+                        <a href="#" title="Marcos Moura">
+                            <img src="assets/img/marcos-moura.jpg" alt="Marcos Moura">
+                        </a>
+                    </h1>
+
+                    <p class="person-description"><strong>Front End</strong> System Analyst from <strong>Brazil</strong> with a focus on usability and performance.</p>
+                </div>
+
+                <button type="button" class="page-menu icon-menu">
+                    <span>Menu</span>
+                </button>
             </header>
 
             <main class="main-content">
