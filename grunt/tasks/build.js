@@ -16,7 +16,6 @@ module.exports = function (grunt) {
         'csso',
         'copy:build',
         'cssmin',
-        'imageoptim',
         'imageEmbed',
         'rev',
         'usemin',
