@@ -30,12 +30,16 @@ body {
         .em-font-size(@base-font-size, 16);
     }
 
-    @media @1024-min {
+    @media @1280-min {
+        @base-font-size: 24;
 
+        .em-font-size(@base-font-size, 16);
     }
 
-    @media @1280-min {
+    @media @1920-min {
+        @base-font-size: 28;
 
+        .em-font-size(@base-font-size, 16);
     }
 }
 
@@ -85,6 +89,10 @@ body {
         flex: 1;
         .em-font-size(@base-font-size, 20);
         text-align: right;
+    }
+
+    @media @1280-min {
+        width: 35%;
     }
 }
 
@@ -144,6 +152,10 @@ body {
         bottom: 0;
         left: 30%;
     }
+
+    @media @1280-min {
+        left: 35%;
+    }
 }
 
 
@@ -160,10 +172,11 @@ body {
         @base-font-size: 16;
 
         width: 30%;
-        /*position: fixed;
-        bottom: 0;
-        left: 0;*/
         .em-font-size(@base-font-size, 20);
+    }
+
+    @media @1280-min {
+        width: 35%;
     }
 }
 
