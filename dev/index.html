@@ -1,6 +1,6 @@
 <!doctype html>
 
-<html class="no-js" lang="pt-BR">
+<html class="no-js" lang="pt-BR" ng-app="main">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
@@ -52,7 +52,7 @@
         <!-- endbuild -->
     </head>
 
-    <body>
+    <body ng-controller="MainController as Main">
         <div class="container">
             <header class="main-header">
                 <h1 class="person-image">
@@ -63,9 +63,7 @@
                 <p class="person-description"><strong>Front End</strong> System Analyst from <strong>Brazil</strong> with a focus on usability and performance.</p>
             </header>
 
-            <main class="main-content">
-                <h1>Howdy!</h1>
-            </main>
+            <main class="main-content" ui-view></main>
 
             <footer class="main-footer">
                 <div class="social-networks">
@@ -88,10 +86,19 @@
         </div>
 
         <!-- Site Scripts -->
-        <!-- build:js assets/js/main.js -->
+        <!-- build:js assets/js/app.js -->
         <!-- bower:js --><!-- endbower -->
 
-        <script src="assets/js/main.js"></script>
+        <script src="assets/js/app.js"></script>
+        <script src="assets/js/app.config.js"></script>
+        <script src="assets/js/app.routes.js"></script>
+
+        <script src="assets/js/controllers/MainController.js"></script>
+        <script src="assets/js/controllers/404Controller.js"></script>
+        <script src="assets/js/controllers/HomeController.js"></script>
+        <script src="assets/js/controllers/ResumeController.js"></script>
+        <script src="assets/js/controllers/PortfolioController.js"></script>
+        <script src="assets/js/controllers/BlogController.js"></script>
         <!-- endbuild -->
     </body>
 </html>

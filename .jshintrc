@@ -21,6 +21,7 @@
   "globals": {
     "Modernizr": true,
     "jQuery": true,
-    "angular": true
-}
+    "angular": true,
+    "app": true
+  }
 }
