@@ -1,6 +1,12 @@
 /*  Base
    ========================================================================== */
 
+html,
+body,
+.container {
+    height: 100%;
+}
+
 body {
     background: @color-body-background;
     color: @color-body-text;
@@ -12,7 +18,10 @@ body {
 }
 
 .container {
+    display: flex;
     position: relative;
+    background: url(../img/bg-header.jpg) no-repeat;
+    background-size: cover;
 
     /* 320px */
     @media only screen and (max-width: 20em) {
@@ -45,13 +54,104 @@ body {
     }
 }
 
+.selection() {
+    background: @color-body-text;
+    color: #fff;
+}
+
+::-moz-selection {
+    .selection;
+}
+
+::selection {
+    .selection;
+}
+
 
 
 /*  Header
    ========================================================================== */
 
 .main-header {
+    width: 30%;
+    padding: 10% 40/@em 5%;
+    display: flex;
+    flex-flow: column;
+    overflow: auto;
     position: relative;
+    background: url(../img/bg-overlay.png);
+    color: rgba(255, 255, 255, .5);
+    text-align: right;
+}
+
+.person-image {
+    margin: 0 0 25/@em;
+    font-size: 1em;
+
+    a {
+        padding: 10/@em;
+        display: inline-block;
+    }
+
+    img {
+        border-radius: 50%;
+        border: 1px solid transparent;
+        transition: .2s @material-timing;
+        transition-property: box-shadow, border-color;
+
+        &:hover {
+            box-shadow: 0 0 15/@em rgba(0, 0, 0, .25);
+            border-color: rgba(0, 0, 0, .2);
+        }
+    }
+}
+
+.person-description {
+    @base-font-size: 20;
+
+    flex: 1;
+    .em-font-size(@base-font-size, 16);
+    line-height: 1.7em;
+
+    strong {
+        color: #fff;
+        font-weight: 400;
+    }
+}
+
+.social-networks {
+    margin-right: -3%;
+
+    a {
+        padding: 3%;
+        margin-left: 5%;
+        display: inline-block;
+        opacity: .4;
+        transition: .2s opacity @material-timing;
+        color: #fff;
+        text-decoration: none;
+
+        &:hover {
+            opacity: .8;
+        }
+
+        span {
+            position: absolute;
+            top: 100%;
+        }
+
+        &:before {
+            @base-font-size: 24;
+
+            .em-font-size(@base-font-size, 16);
+        }
+    }
+}
+
+.copyright {
+    @base-font-size: 13;
+
+    .em-font-size(@base-font-size, 16);
 }
 
 
@@ -60,7 +160,10 @@ body {
    ========================================================================== */
 
 .main-content {
+    padding: 10% 50/@em 5%;
+    flex: 1;
     position: relative;
+    background-color: #fff;
 }
 
 
