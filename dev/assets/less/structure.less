@@ -101,6 +101,15 @@ body {
     margin: 0 0 15/@em;
     display: inline-block;
     font-size: 1em;
+    opacity: 0;
+    transform: translate3D(0, -50/@em, 0);
+    transition: .6s .2s ease;
+    transition-property: transform, opacity;
+
+    .loaded & {
+        opacity: 1;
+        transform: translate3D(0, 0, 0);
+    }
 
     a {
         padding: 10/@em;
@@ -110,7 +119,7 @@ body {
     img {
         border-radius: 50%;
         border: 1px solid transparent;
-        transition: .2s @material-timing;
+        transition: .2s ease;
         transition-property: box-shadow, border-color;
 
         &:hover {
@@ -126,6 +135,15 @@ body {
     margin: 0;
     .em-font-size(@base-font-size, 16);
     line-height: 1.6em;
+    opacity: 0;
+    transform: translate3D(0, -40/@em, 0);
+    transition: .5s .1s ease;
+    transition-property: transform, opacity;
+
+    .loaded & {
+        opacity: 1;
+        transform: translate3D(0, 0, 0);
+    }
 
     strong {
         color: #fff;
@@ -139,7 +157,7 @@ body {
    ========================================================================== */
 
 .main-content {
-    padding: 40/@em 25/@em 25/@em;
+    display: flex;
     flex: 1;
     position: relative;
     background-color: #fff;
@@ -147,7 +165,7 @@ body {
     @media @960-min {
         @base-font-size: 20;
 
-        padding: 95/@em 50/@em 30/@em;
+
         overflow: auto;
         position: absolute;
         top: 0;
@@ -160,6 +178,32 @@ body {
         @base-font-size: 24;
 
         left: 35%;
+    }
+}
+
+.main-content-view {
+    margin: 25/@em;
+    flex: 1;
+    transition: .5s ease;
+    transition-property: opacity, transform;
+    will-change: opacity, transform;
+
+    @media @960-min {
+        margin: 95/@em 50/@em 30/@em;
+    }
+
+    &.ng-enter {
+        opacity: 0;
+        transform: translate3D(0, -32/@em, 0);
+    }
+
+    &.ng-enter-active {
+        opacity: 1;
+        transform: translate3D(0, 0, 0);
+    }
+
+    &.ng-leave {
+        display: none;
     }
 }
 

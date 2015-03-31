@@ -53,7 +53,7 @@
     </head>
 
     <body ng-controller="MainController as Main">
-        <div class="container">
+        <div class="container" ng-class="{'loaded': Main.structureLoaded}">
             <header class="main-header">
                 <h1 class="person-image">
                     <a href="#" title="Marcos Moura">
@@ -63,7 +63,11 @@
                 <p class="person-description"><strong>Front End</strong> System Analyst from <strong>Brazil</strong> with a focus on usability and performance.</p>
             </header>
 
-            <main class="main-content" ui-view></main>
+            <main class="main-content">
+                <div class="main-content-view" ui-view>
+
+                </div>
+            </main>
 
             <footer class="main-footer">
                 <div class="social-networks">
