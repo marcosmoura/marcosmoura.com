@@ -21,7 +21,6 @@ module.exports = function (grunt) {
         'rev',
         'usemin',
         'htmlmin',
-        'compress',
         'clean:tmp'
     ]);
 };
